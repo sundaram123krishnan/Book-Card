@@ -2,15 +2,19 @@
 
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const router = require("./routes/route");
 
 const app = express();
 
 app.use(express.json());
 
+app.use(cors());
+
 app.use("/books", router);
 
 mongoose.connect(
+  // "mongodb+srv://sundaram:q7HXW6nnmyFJuvH@cluster0.m6d6fhk.mongodb.net/?retryWrites=true&w=majority"
   "mongodb+srv://sundaram:q7HXW6nnmyFJuvH@cluster0.m6d6fhk.mongodb.net/?retryWrites=true&w=majority"
 );
 
