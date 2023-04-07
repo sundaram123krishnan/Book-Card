@@ -2,18 +2,20 @@ import React from "react";
 import Book from "./Book";
 import axios from "axios";
 
+
 const URL = "http://localhost:5000/books";
+
 
 async function fetchHandler() {
   return await axios.get(URL).then((res) => res.data);
 }
+
 
 export default function Allbooks() {
   const [books, setBooks] = React.useState([]);
   React.useEffect(() => {
     fetchHandler().then((data) => setBooks(data));
   }, []);
-  console.log(books);
   const data = books.books?.map((value) => {
     return (
       <Book
@@ -24,5 +26,5 @@ export default function Allbooks() {
       />
     );
   });
-  return <div>{data}</div>;
+  return <div className="grid grid-cols-6">{data}</div>;
 }
