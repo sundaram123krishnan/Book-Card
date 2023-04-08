@@ -15,18 +15,24 @@ export default function Book(props) {
   }
 
   return (
-    <div className="flex flex-col">
-      <img src={props.image} alt="" />
-      <h1>{props.name}</h1>
-      <h1>{props.author}</h1>
-      <h1>{props.description}</h1>
-      <h1>{props.price}</h1>
+    <div className="flex flex-col justify-center border-white border-2 p-3 rounded-lg gap-2 ">
+      <img src={props.image} alt="" className="w-full" />
+      <h1 className="font-bold">BOOK: {props.name}</h1>
+      <h1 className="font-bold">Author: {props.author}</h1>
+      <h1 className="font-bold">Desc: {props.description}</h1>
+      <h1 className="font-bold">Price: Rs.{props.price}</h1>
 
-      <div>
-        <Link className="border-2 px-3 " to={`/books/${id}`}>
+      <div className="flex gap-2">
+        <Link
+          className="px-3 bg-black text-white text-lg py-2 uppercase"
+          to={`/books/${id}`}
+        >
           Update
         </Link>
-        <button className="border-2 px-3" onClick={deleteHandler}>
+        <button
+          className="px-3 bg-black text-white text-lg py-2 uppercase"
+          onClick={deleteHandler}
+        >
           Delete
         </button>
       </div>

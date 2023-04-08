@@ -40,57 +40,60 @@ export default function Add() {
   }
 
   return (
-    <form
-      className="flex flex-col gap-5 text-xl items-start justify-center"
-      onSubmit={handleSubmit}
-    >
-      <input
-        type="text"
-        id="name"
-        name="name"
-        value={values.name}
-        placeholder="Enter the name of the book"
-        className="px-3 border-black border-2 w-max"
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        id="author"
-        name="author"
-        value={values.author}
-        onChange={handleChange}
-        placeholder="Enter the name of the author"
-        className="px-3 border-black border-2 w-max"
-      />
-      <input
-        type="text"
-        id="description"
-        name="description"
-        value={values.description}
-        onChange={handleChange}
-        placeholder="Enter description about the book"
-        className="px-3 border-black border-2 w-max"
-      />
-      <input
-        type="text"
-        id="image"
-        name="image"
-        value={values.image}
-        onChange={handleChange}
-        placeholder="Enter the url of the image"
-        className="px-3 border-black border-2 w-max"
-      />
-      <input
-        type="text"
-        id="price"
-        name="price"
-        value={values.price}
-        onChange={handleChange}
-        placeholder="Enter the price of the book"
-        className="px-3 border-black border-2 w-max"
-      />
+    <>
+    <h1 className="text-center mt-10 text-5xl font-bold">ADD YOUR BOOK</h1>
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-10 items-center justify-center mt-20"
+      >
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={values.name}
+          placeholder="Enter the name of the book"
+          className="px-5 py-2 border-black border-2 w-1/2 text-3xl rounded-md"
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          id="author"
+          name="author"
+          value={values.author}
+          onChange={handleChange}
+          placeholder="Enter the name of the author"
+          className="px-5 py-2 border-black border-2 w-1/2 text-3xl rounded-md"
+        />
+        <input
+          type="text"
+          id="description"
+          name="description"
+          value={values.description}
+          onChange={handleChange}
+          placeholder="Enter description about the book"
+          className="px-5 py-2 border-black border-2 w-1/2 text-3xl rounded-md"
+        />
+        <input
+          type="text"
+          id="image"
+          name="image"
+          value={values.image}
+          onChange={handleChange}
+          placeholder="Enter the url of the image"
+          className="px-5 py-2 border-black border-2 w-1/2 text-3xl rounded-md"
+        />
+        <input
+          type="text"
+          id="price"
+          name="price"
+          value={values.price}
+          onChange={handleChange}
+          placeholder="Enter the price of the book"
+          className="px-5 py-2 border-black border-2 w-1/2 text-3xl rounded-md"
+        />
 
-      <button type="submit">add book</button>
-    </form>
+        <button type="submit" className="uppercase border-2  px-10 py-5">add book</button>
+      </form>
+    </>
   );
 }

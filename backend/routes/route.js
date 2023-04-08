@@ -21,6 +21,7 @@ router.post("/", async (req, res) => {
     res.status(200).json(books);
   } catch (error) {
     const status = error.status || 500;
+    
     res.status(status).send("Oops! An error occurred", error);
   }
 });

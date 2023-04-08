@@ -9,14 +9,14 @@ import BookDetail from "./BookDetail";
 export default function Header() {
   return (
     <BrowserRouter>
-      <div className="flex gap-2 bg-blue-800 text-white p-5">
-        <button className="text-lg font-bold">
-          <NavLink to="/add">Add</NavLink>
+      <div className="flex justify-around bg-black text-white p-5 ">
+        <button className="text-lg font-bold uppercase">
+          <NavLink to="/add" >Add</NavLink>
         </button>
-        <button className="text-lg font-bold">
+        <button className="text-lg font-bold uppercase">
           <NavLink to="/books">books</NavLink>
         </button>
-        <button className="text-lg font-bold">
+        <button className="text-lg font-bold uppercase">
           <NavLink to="/about">About</NavLink>
         </button>
       </div>
