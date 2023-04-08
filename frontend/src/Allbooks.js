@@ -25,5 +25,7 @@ export default function Allbooks() {
       />
     );
   });
-  return <div className="grid grid-cols-7 p-3">{data}</div>;
+  return <div className="grid grid-cols-7 p-3 gap-4">{data}</div>;
 }
+
+

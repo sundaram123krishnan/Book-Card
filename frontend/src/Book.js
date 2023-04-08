@@ -16,7 +16,7 @@ export default function Book(props) {
 
   return (
     <div className="flex flex-col justify-center border-white border-2 p-3 rounded-lg gap-2 ">
-      <img src={props.image} alt="" className="w-full" />
+      <img src={props.image} alt="" className="w-72"/>
       <h1 className="font-bold">BOOK: {props.name}</h1>
       <h1 className="font-bold">Author: {props.author}</h1>
       <h1 className="font-bold">Desc: {props.description}</h1>

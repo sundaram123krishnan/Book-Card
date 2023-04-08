@@ -41,7 +41,7 @@ export default function Add() {
 
   return (
     <>
-    <h1 className="text-center mt-10 text-5xl font-bold">ADD YOUR BOOK</h1>
+      <h1 className="text-center mt-10 text-5xl font-bold">ADD YOUR BOOK</h1>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-10 items-center justify-center mt-20"
@@ -91,8 +91,12 @@ export default function Add() {
           placeholder="Enter the price of the book"
           className="px-5 py-2 border-black border-2 w-1/2 text-3xl rounded-md"
         />
-
-        <button type="submit" className="uppercase border-2  px-10 py-5">add book</button>
+        <button
+          type="submit"
+          className="uppercase rounded-md px-10 py-5 text-3xl font-bold bg-purple-700"
+        >
+          add book
+        </button>
       </form>
     </>
   );

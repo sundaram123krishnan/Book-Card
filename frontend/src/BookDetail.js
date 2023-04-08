@@ -47,10 +47,9 @@ export default function BookDetail() {
   console.log(values);
   return (
     <div>
-      i am id
       <form
-        className="flex flex-col gap-5 text-xl items-start justify-center"
         onSubmit={handleSubmit}
+        className="flex flex-col gap-10 items-center justify-center mt-20"
       >
         <input
           type="text"
@@ -58,7 +57,7 @@ export default function BookDetail() {
           name="name"
           value={values.name}
           placeholder="Enter the name of the book"
-          className="px-3 border-black border-2 w-max"
+          className="px-5 py-2 border-black border-2 w-1/2 text-3xl rounded-md"
           onChange={handleChange}
         />
         <input
@@ -68,7 +67,7 @@ export default function BookDetail() {
           value={values.author}
           onChange={handleChange}
           placeholder="Enter the name of the author"
-          className="px-3 border-black border-2 w-max"
+          className="px-5 py-2 border-black border-2 w-1/2 text-3xl rounded-md"
         />
         <input
           type="text"
@@ -77,7 +76,7 @@ export default function BookDetail() {
           value={values.description}
           onChange={handleChange}
           placeholder="Enter description about the book"
-          className="px-3 border-black border-2 w-max"
+          className="px-5 py-2 border-black border-2 w-1/2 text-3xl rounded-md"
         />
         <input
           type="text"
@@ -85,10 +84,9 @@ export default function BookDetail() {
           name="image"
           value={values.image}
           onChange={handleChange}
-          placeholder="Enter the url of the book"
-          className="px-3 border-black border-2 w-max"
+          placeholder="Enter the url of the image"
+          className="px-5 py-2 border-black border-2 w-1/2 text-3xl rounded-md"
         />
-
         <input
           type="text"
           id="price"
@@ -96,9 +94,15 @@ export default function BookDetail() {
           value={values.price}
           onChange={handleChange}
           placeholder="Enter the price of the book"
-          className="px-3 border-black border-2 w-max"
+          className="px-5 py-2 border-black border-2 w-1/2 text-3xl rounded-md"
         />
-        <button type="submit">update book</button>
+
+        <button
+          type="submit"
+          className="uppercase rounded-md px-10 py-5 text-3xl font-bold bg-purple-700"
+        >
+          Update book
+        </button>
       </form>
     </div>
   );
