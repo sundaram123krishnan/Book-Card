@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import Add from "./Add";
 import About from "./About";
 import Allbooks from "./Allbooks";
+import BookDetail from "./BookDetail";
 
 export default function Header() {
   return (
@@ -22,7 +23,7 @@ export default function Header() {
       <Routes>
         <Route exact path="/add" element={<Add />} />
         <Route exact path="/books" element={<Allbooks />} />
-
+        <Route exact path="/books/:id" element={<BookDetail />} />
         <Route exact path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>

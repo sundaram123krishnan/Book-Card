@@ -34,7 +34,8 @@ router.get("/:id", async (req, res) => {
     }
     return res.status(200).json(books);
   } catch (error) {
-    res.status(404).send("Oops! An error occurred", error);
+    const status = error.status || 500;
+    res.status(status).send("Oops! An error occurred", error);
   }
 });
 

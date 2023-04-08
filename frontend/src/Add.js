@@ -9,6 +9,7 @@ export default function Add() {
     author: "",
     description: "",
     price: 0,
+    image: "",
   });
 
   function handleChange(e) {
@@ -26,6 +27,7 @@ export default function Add() {
         name: String(values.name),
         author: String(values.author),
         description: String(values.description),
+        image: String(values.image),
         price: Number(values.price),
       })
       .then((res) => res.data);
@@ -34,7 +36,6 @@ export default function Add() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    console.log(values);
     sendRequest().then(() => history("/books"));
   }
 
@@ -72,6 +73,15 @@ export default function Add() {
       />
       <input
         type="text"
+        id="image"
+        name="image"
+        value={values.image}
+        onChange={handleChange}
+        placeholder="Enter the url of the image"
+        className="px-3 border-black border-2 w-max"
+      />
+      <input
+        type="text"
         id="price"
         name="price"
         value={values.price}
@@ -79,6 +89,7 @@ export default function Add() {
         placeholder="Enter the price of the book"
         className="px-3 border-black border-2 w-max"
       />
+
       <button type="submit">add book</button>
     </form>
   );

@@ -2,14 +2,11 @@ import React from "react";
 import Book from "./Book";
 import axios from "axios";
 
-
 const URL = "http://localhost:5000/books";
-
 
 async function fetchHandler() {
   return await axios.get(URL).then((res) => res.data);
 }
-
 
 export default function Allbooks() {
   const [books, setBooks] = React.useState([]);
@@ -23,6 +20,8 @@ export default function Allbooks() {
         author={value.author}
         description={value.description}
         price={value.price}
+        id={value._id}
+        image={value.image}
       />
     );
   });
